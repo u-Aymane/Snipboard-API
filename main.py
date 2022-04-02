@@ -34,6 +34,8 @@ def main():
                     print(f'{random_str}: Valid')
                     save(data[2], img_id=random_str)
                 else:
+                    if data[1] != 403:
+                        print(f'code: {data[1]}')
                     with open(f'invalid.txt', 'a', encoding='utf-8') as f:
                         f.writelines(f'{random_str}\n')
                     f.close()
